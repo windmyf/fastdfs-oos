@@ -11,13 +11,23 @@ import org.springframework.web.multipart.MultipartFile;
 public interface FastDFSService {
 
     /**
-     * @Description ：上传文件
-     * @author : myf
      * @param : file
      * @param : fileExtName
      * @return :
-     * @exception :
+     * @throws :
+     * @Description ：上传文件
+     * @author : myf
      * @date : 2020/10/25 19:05
      */
     public String upload(MultipartFile file, String fileExtName) throws Exception;
+
+    /**
+     * @param : file,userId
+     * @return :
+     * @throws :
+     * @Description ：使用oss上传文件
+     * @author : myf
+     * @date : 2020/10/25 20:19
+     */
+    public String uploadOSS(MultipartFile file, String userId, String fileExtName) throws Exception;
 }
